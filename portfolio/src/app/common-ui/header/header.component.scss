@@ -1,0 +1,15 @@
+.main-header {
+  background: white;
+  border-bottom: 1px solid gainsboro;
+  .nav-link {
+    font-weight: 500;
+
+    &.active {
+      color: #3b82f6 !important;
+    }
+
+    &:hover {
+      color: #3b82f6;
+    }
+  }
+}

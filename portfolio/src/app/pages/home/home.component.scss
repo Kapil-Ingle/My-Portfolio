@@ -1,0 +1,55 @@
+body {
+  background: #eef2ff;
+}
+
+/* home Section */
+.home-section {
+  min-height: calc(100vh - 140px);
+  background: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  padding: 40px 0;
+
+  .home-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+
+    .highlight {
+      color: #3b82f6;
+    }
+  }
+
+  .home-image-wrapper {
+  width: 330px;
+  height: 330px;
+  background: #3b82f6;
+
+  /* 👇 Perfect blob shape similar to your reference image */
+  border-radius: 60% 40% 55% 45% / 45% 60% 40% 55%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+
+  .home-image {
+    width: 78%;
+    position: absolute;
+    bottom: 0; /* Makes the image sit better like your screenshot */
+  }
+}
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 32px !important;
+  }
+
+  .home-image-wrapper {
+    width: 220px !important;
+    height: 220px !important;
+  }
+}
