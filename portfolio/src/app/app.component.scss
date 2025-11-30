@@ -4,31 +4,29 @@ html, body {
   padding: 0;
 }
 
-.container {
-  height: 100%;
-  width: 100%;
+/* Root container applies full-height flex layout */
+:host {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #f2f6ff;
+  background: #f2f6ff; 
 }
 
-/* HEADER AREA (fixed height, no spacing) */
+/* HEADER (fixed height) */
 app-header {
   flex-shrink: 0;
-  flex-grow: 0;
 }
 
-/* CONTENT AREA (scrollable, fills remaining space) */
-.content{
-    flex-shrink: 1;
-    flex-grow: 1;
-    padding: 0px 0px;
-    position: relative;
-    overflow-y: auto;
-}
-
-/* FOOTER */
+/* FOOTER (fixed height) */
 app-footer {
   flex-shrink: 0;
-  flex-grow: 0;
+}
+
+/* CONTENT (fills remaining space) */
+.content {
+  flex: 1;                 /* takes all free space */
+  overflow-y: auto;        /* scroll only this area */
+  display: flex;           /* important for child sections like your home section */
+  flex-direction: column;
+  padding: 0;
 }

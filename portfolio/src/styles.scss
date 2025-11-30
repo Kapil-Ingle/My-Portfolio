@@ -5,3 +5,7 @@ html, body{
  background: #f2f6ff;
  font-family: "Poppins", sans-serif;
 }
+
+.main-content{
+  height: calc(100vh - 138px);
+}

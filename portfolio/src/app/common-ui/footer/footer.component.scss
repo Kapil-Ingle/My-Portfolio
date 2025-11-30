@@ -1,10 +1,23 @@
 .main-footer {
+  padding: 1.5rem 0; // responsive vertical spacing
+
+  p {
+    font-size: clamp(0.8rem, 1vw, 1rem); // responsive text size
+  }
+
   .social-icons a {
-    font-size: 22px;
+    font-size: clamp(1.2rem, 2vw, 1.6rem); // icons scale with screen
     color: #222;
+    transition: color 0.2s ease;
 
     &:hover {
       color: #3b82f6;
     }
   }
+
+  // Optional: spacing between icons
+  .social-icons {
+    gap: 1rem; 
+  }
 }
+

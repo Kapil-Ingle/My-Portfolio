@@ -3,11 +3,10 @@ body {
 }
 
 /* home Section */
-.home-section {
-  min-height: calc(100vh - 140px);
-  background: white;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  padding: 40px 0;
+.content-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
 
   .home-title {
     font-size: 48px;

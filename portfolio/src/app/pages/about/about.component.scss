@@ -1,0 +1,66 @@
+/* MAIN SECTION (takes full available height from router-outlet) */
+.content-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* important for proper flex shrinking */
+}
+
+/* PAGE HEADER = 25% HEIGHT */
+.page-header {
+  flex: 0 0 25%;    /* fixed 25% of parent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .section-title {
+    color: #3b82f6;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+
+    /* Underline */
+    &::after {
+      content: "";
+      display: block;
+      width: 70%;          /* underline length */
+      height: 3px;         /* thickness */
+      background: #3b82f6;
+      margin: 6px auto 0;  /* space + center */
+      border-radius: 2px;  /* smooth */
+    }
+  }
+}
+
+/* PAGE CONTENT = remaining 75% */
+.page-content {
+  flex: 1;   /* takes all leftover space */
+  display: flex;
+  align-items: center; 
+}
+
+/* IMAGE STYLING */
+.about-image img {
+  width: 70%;
+  max-width: 320px;
+  padding-top: 10%;
+}
+
+/* RESPONSIVE: for mobile screens */
+@media (max-width: 768px) {
+  .page-header {
+    flex: 0 0 auto;    /* header gets natural height */
+  }
+
+  .page-content {
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .about-image img {
+    width: 55%;
+  }
+}
