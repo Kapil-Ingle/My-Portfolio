@@ -1,0 +1,127 @@
+.experience-section {
+  .section-title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700;
+    color: #3b82f6;
+
+    span {
+    position: relative;
+    display: inline-block;
+
+        &::after {
+        content: "";
+        position: absolute;
+        left: 15%;        /* (100 - 70) / 2 */
+        bottom: -8px;
+        width: 70%;
+        height: 3px;
+        background-color: #3b82f6;
+        border-radius: 2px;
+        }
+    }
+  }
+
+  .section-subtitle {
+    color: #6b7280;
+    font-size: 1rem;
+  }
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 2px;
+    height: 100%;
+    background: #e5e7eb;
+  }
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Dot */
+.timeline-dot {
+  position: absolute;
+  left: 2px;
+  top: 15px;
+  width: 16px;
+  height: 16px;
+  background: #3b82f6;
+  border-radius: 50%;
+}
+
+/* Card */
+.timeline-card {
+  margin-left: 30px;
+  border: none;
+  border-radius: 12px;
+
+  .role-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .company-name {
+    font-weight: 500;
+  }
+
+  .duration {
+    font-size: 0.9rem;
+  }
+
+  .responsibilities {
+    margin-top: 12px;
+    padding-left: 18px;
+
+    li {
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+      color: #374151;
+    }
+  }
+
+  .tech-stack {
+    margin-top: 12px;
+
+    .badge {
+      background: #eff6ff;
+      color: #2563eb;
+      font-weight: 500;
+      margin-right: 6px;
+      margin-bottom: 6px;
+      padding: 6px 10px;
+      border-radius: 8px;
+    }
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .timeline {
+    margin-left: 0;
+    padding-left: 0;
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  .timeline-dot {
+    left: -8px;
+  }
+
+  .timeline-card {
+    margin-left: 0;
+  }
+}

@@ -11,9 +11,17 @@ import { Router, RouterModule } from '@angular/router';
 
 export class HeaderComponent {
   private router = inject(Router);
+  isMenuOpen = false;
 
-  navigateTo(routerLink: string){
-    this.router.navigate([routerLink])
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    // Close only on mobile/tablet
+    if (window.innerWidth < 992) {
+      this.isMenuOpen = false;
+    }
   }
   
 }

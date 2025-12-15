@@ -40,11 +40,9 @@
   align-items: center; 
 }
 
-/* IMAGE STYLING */
-.skill-image img {
-  width: 80%;
-  max-width: 320px;
-  padding-top: 10%;
+.group-title {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 600;
 }
 
 /* RESPONSIVE: for mobile screens */
@@ -56,12 +54,6 @@
   .page-content {
     flex: 1;
     flex-direction: column;
-    text-align: center;
-    padding-top: 20px;
-  }
-
-  .skill-image img {
-    width: 55%;
   }
 }
 
